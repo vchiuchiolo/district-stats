@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="3600">
+<title>Sag Harbor UFSD - District Statistics</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: transparent; padding: 20px; }
+
+  .stats-container {
+    background: linear-gradient(135deg, #1a3a5c 0%, #0f2540 100%);
+    border-radius: 16px;
+    padding: 32px;
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  .stats-header {
+    text-align: center;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .stats-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .stats-subtitle {
+    font-size: 12px;
+    opacity: 0.5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .stat-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 22px 16px;
+    text-align: center;
+    animation: fadeInUp 0.5s ease both;
+  }
+
+  .stat-card:nth-child(1) { animation-delay: 0.1s; }
+  .stat-card:nth-child(2) { animation-delay: 0.2s; }
+  .stat-card:nth-child(3) { animation-delay: 0.3s; }
+
+  .stat-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+
+  .stat-number {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 6px;
+    background: linear-gradient(135deg, #ffffff, #a8d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    opacity: 0.6;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .divider-label {
+    font-size: 11px;
+    opacity: 0.4;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .devices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .device-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+    animation: fadeInUp 0.5s ease both;
+  }
+
+  .device-card:nth-child(1) { animation-delay: 0.4s; }
+  .device-card:nth-child(2) { animation-delay: 0.5s; }
+  .device-card:nth-child(3) { animation-delay: 0.6s; }
+
+  .device-number {
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .device-icon { font-size: 18px; margin-bottom: 6px; display: block; }
+
+  .device-label {
+    font-size: 11px;
+    opacity: 0.55;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .stats-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 11px;
+    opacity: 0.35;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-number { font-size: 30px; }
+    .devices-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="stats-container">
+  <div class="stats-header">
+    <div class="stats-title">Sag Harbor Union Free School District</div>
+    <div class="stats-subtitle">District at a Glance</div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-icon">🎓</span>
+      <div class="stat-number">907</div>
+      <div class="stat-label">Students</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">👩‍🏫</span>
+      <div class="stat-number">315</div>
+      <div class="stat-label">Staff</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">💻</span>
+      <div class="stat-number">1,785</div>
+      <div class="stat-label">Total Devices</div>
+    </div>
+  </div>
+
+  <div class="divider-label">Device Breakdown</div>
+  <div class="devices-grid">
+    <div class="device-card">
+      <span class="device-icon">🟡</span>
+      <div class="device-number">984</div>
+      <div class="device-label">Chromebooks</div>
+    </div>
+    <div class="device-card">
+      <span class="device-icon">🍎</span>
+      <div class="device-number">359</div>
+      <div class="device-label">Mac Computers</div>
+    </div>
+    <div class="device-card">
+      <span class="device-icon">📱</span>
+      <div class="device-number">442</div>
+      <div class="device-label">iPads</div>
+    </div>
+  </div>
+
+  <div class="stats-footer">
+    Last updated: February 12, 2026 at 01:01 PM &nbsp;·&nbsp; Auto-refreshes hourly
+  </div>
+</div>
+</body>
+</html>
