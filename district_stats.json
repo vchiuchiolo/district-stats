@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-02-12T18:38:40.934482",
+  "aggregated": {
+    "total_students": 907,
+    "total_staff": 315,
+    "chromebooks": 984,
+    "mac_computers": 359,
+    "ipads": 442,
+    "total_devices": 1785,
+    "notes": []
+  },
+  "raw": {
+    "google": {
+      "staff": 315,
+      "students": 909,
+      "chromebooks": 984,
+      "error": null
+    },
+    "jamf": {
+      "macs": 359,
+      "ipads": 442,
+      "error": null
+    },
+    "eschool": {
+      "students": 907,
+      "staff": 325,
+      "error": null
+    }
+  }
+}
