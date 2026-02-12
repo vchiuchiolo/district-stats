@@ -1,0 +1,45 @@
+name: Update District Stats
+
+on:
+  schedule:
+    - cron: '0 11 * * *'  # 6 AM EST daily (11 UTC)
+  workflow_dispatch:       # Allow manual trigger from GitHub UI
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client requests
+
+      - name: Write Google service account key
+        run: |
+          echo "${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}" | base64 --decode > /tmp/service_account.json
+
+      - name: Run stats script
+        env:
+          GOOGLE_ADMIN_EMAIL: ${{ secrets.GOOGLE_ADMIN_EMAIL }}
+          GOOGLE_SERVICE_ACCOUNT_FILE: /tmp/service_account.json
+          JAMF_CLIENT_ID: ${{ secrets.JAMF_CLIENT_ID }}
+          JAMF_CLIENT_SECRET: ${{ secrets.JAMF_CLIENT_SECRET }}
+          ESCHOOL_CLIENT_ID: ${{ secrets.ESCHOOL_CLIENT_ID }}
+          ESCHOOL_CLIENT_SECRET: ${{ secrets.ESCHOOL_CLIENT_SECRET }}
+        run: python3 aggregate_and_display.py
+
+      - name: Commit and push updated widget
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add district_stats_widget.html district_stats.json
+          git diff --staged --quiet || git commit -m "Auto update stats $(date +'%Y-%m-%d')"
+          git push
