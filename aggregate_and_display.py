@@ -10,7 +10,7 @@ import json
 import os
 import requests
 import urllib3
-from datetime import datetime
+from datetime import datetime, timezone
 from urllib.parse import quote
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -251,7 +251,8 @@ def aggregate_data(google, jamf, eschool):
 
 def generate_widget(stats):
     print("\n[Widget] Generating HTML...")
-    updated = datetime.now().strftime('%B %d, %Y at %I:%M %p')
+    ny_time = datetime.now(ZoneInfo("America/New_York"))
+    updated = ny_time.now().strftime('%B %d, %Y at %I:%M %p')
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
