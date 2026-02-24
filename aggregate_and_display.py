@@ -267,7 +267,7 @@ def generate_widget(stats):
   body {{ font-family: 'DM Sans', sans-serif; background: transparent; padding: 20px; }}
 
   .stats-container {{
-    background: linear-gradient(135deg, #1a3a5c 0%, #0f2540 100%);
+    background: linear-gradient(135deg, #890204 0%, #890204 100%);
     border-radius: 16px;
     padding: 32px;
     color: white;
@@ -324,7 +324,7 @@ def generate_widget(stats):
     font-weight: 700;
     line-height: 1;
     margin-bottom: 6px;
-    background: linear-gradient(135deg, #ffffff, #a8d4ff);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -368,7 +368,7 @@ def generate_widget(stats):
   .device-number {{
     font-size: 28px;
     font-weight: 700;
-    background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -469,7 +469,7 @@ def generate_widget(stats):
 def main():
     print("="*60)
     print("Sag Harbor UFSD - District Statistics Update")
-    print(f"Started: {datetime.now().strftime('%Y-%m-%d %I:%M %p')}")
+    print(f"Started: {ny_time.now().strftime('%B %d, %Y at %I:%M %p')}")
     print("="*60)
 
     # Collect from all sources
