@@ -23,7 +23,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Google Workspace
 GOOGLE_SERVICE_ACCOUNT_FILE = os.environ.get('GOOGLE_SERVICE_ACCOUNT_FILE', '/Users/vchiuchiolo/Documents/API/live-user-counts.json')
-GOOGLE_ADMIN_EMAIL = os.environ.get('GOOGLE_ADMIN_EMAIL', 'YOUR-ADMIN-EMAIL@sagharborschools.org')
+GOOGLE_ADMIN_EMAIL = os.environ.get('GOOGLE_ADMIN_EMAIL', 'googleadmin.chiuchiolo@sagharborschools.org')
 STAFF_OU = '/users/employees'
 STUDENT_OU = '/users/students'
 CHROMEBOOK_OU = '/chromebooks/2025 chromebooks'
@@ -251,8 +251,9 @@ def aggregate_data(google, jamf, eschool):
 
 def generate_widget(stats):
     print("\n[Widget] Generating HTML...")
+    from zoneinfo import ZoneInfo
     ny_time = datetime.now(ZoneInfo("America/New_York"))
-    updated = ny_time.now().strftime('%B %d, %Y at %I:%M %p')
+    updated = ny_time.strftime('%B %d, %Y at %I:%M %p EST')
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -467,9 +468,11 @@ def generate_widget(stats):
 # ============================================================
 
 def main():
+    from zoneinfo import ZoneInfo
     print("="*60)
     print("Sag Harbor UFSD - District Statistics Update")
-    print(f"Started: {ny_time.now().strftime('%B %d, %Y at %I:%M %p')}")
+    ny_time = datetime.now(ZoneInfo("America/New_York"))
+    print(f"Started: {ny_time.strftime('%Y-%m-%d %I:%M %p EST')}")
     print("="*60)
 
     # Collect from all sources
