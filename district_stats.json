@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-21T11:58:14.663535",
+  "timestamp": "2026-04-22T11:58:04.882228",
   "aggregated": {
     "total_students": 910,
     "total_staff": 314,
@@ -23,7 +23,7 @@
     },
     "eschool": {
       "students": 910,
-      "staff": 326,
+      "staff": 325,
       "error": null
     }
   }
