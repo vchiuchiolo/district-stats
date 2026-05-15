@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-14T12:24:25.267011",
+  "timestamp": "2026-05-15T12:29:05.580239",
   "aggregated": {
     "total_students": 913,
     "total_staff": 313,
@@ -12,7 +12,7 @@
   "raw": {
     "google": {
       "staff": 313,
-      "students": 907,
+      "students": 906,
       "chromebooks": 1071,
       "error": null
     },
