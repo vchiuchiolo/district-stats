@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-06-30T13:07:53.838115",
+  "timestamp": "2026-07-01T13:32:02.990017",
   "aggregated": {
-    "total_students": 908,
+    "total_students": 905,
     "total_staff": 314,
     "chromebooks": 1056,
     "mac_computers": 368,
@@ -22,7 +22,7 @@
       "error": null
     },
     "eschool": {
-      "students": 908,
+      "students": 905,
       "staff": 322,
       "error": null
     }
