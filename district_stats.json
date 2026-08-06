@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-08-05T12:49:25.819167",
+  "timestamp": "2026-08-06T12:53:26.319921",
   "aggregated": {
     "total_students": 839,
-    "total_staff": 318,
+    "total_staff": 317,
     "chromebooks": 987,
     "mac_computers": 630,
     "ipads": 445,
@@ -13,7 +13,7 @@
   },
   "raw": {
     "google": {
-      "staff": 318,
+      "staff": 317,
       "students": 907,
       "chromebooks": 987,
       "error": null
