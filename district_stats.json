@@ -1,20 +1,20 @@
 {
-  "timestamp": "2026-08-30T15:09:02.986723",
+  "timestamp": "2026-08-31T17:49:18.389058",
   "aggregated": {
-    "total_students": 896,
+    "total_students": 898,
     "total_staff": 317,
     "chromebooks": 989,
     "mac_computers": 631,
     "ipads": 446,
     "total_devices": 2066,
     "notes": [
-      "Student count differs by 12 between eSchool (896) and Google (884)"
+      "Student count differs by 13 between eSchool (898) and Google (885)"
     ]
   },
   "raw": {
     "google": {
       "staff": 317,
-      "students": 884,
+      "students": 885,
       "chromebooks": 989,
       "error": null
     },
@@ -24,7 +24,7 @@
       "error": null
     },
     "eschool": {
-      "students": 896,
+      "students": 898,
       "staff": 323,
       "error": null
     }
