@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-09-10T14:45:24.324617",
+  "timestamp": "2026-09-11T14:49:12.531781",
   "aggregated": {
-    "total_students": 896,
+    "total_students": 893,
     "total_staff": 319,
-    "chromebooks": 988,
+    "chromebooks": 990,
     "mac_computers": 621,
     "ipads": 446,
-    "total_devices": 2055,
+    "total_devices": 2057,
     "notes": []
   },
   "raw": {
     "google": {
       "staff": 319,
-      "students": 906,
-      "chromebooks": 988,
+      "students": 903,
+      "chromebooks": 990,
       "error": null
     },
     "jamf": {
@@ -22,7 +22,7 @@
       "error": null
     },
     "eschool": {
-      "students": 896,
+      "students": 893,
       "staff": 322,
       "error": null
     }
