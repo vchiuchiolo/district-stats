@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-13T14:46:58.887847",
+  "timestamp": "2026-09-14T16:45:16.614812",
   "aggregated": {
     "total_students": 892,
     "total_staff": 319,
@@ -7,12 +7,14 @@
     "mac_computers": 621,
     "ipads": 446,
     "total_devices": 2057,
-    "notes": []
+    "notes": [
+      "Student count differs by 13 between eSchool (892) and Google (905)"
+    ]
   },
   "raw": {
     "google": {
       "staff": 319,
-      "students": 902,
+      "students": 905,
       "chromebooks": 990,
       "error": null
     },
