@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-01T17:14:15.297664",
+  "timestamp": "2026-10-02T16:28:01.417244",
   "aggregated": {
     "total_students": 886,
     "total_staff": 320,
-    "chromebooks": 986,
+    "chromebooks": 987,
     "mac_computers": 622,
     "ipads": 446,
-    "total_devices": 2054,
+    "total_devices": 2055,
     "notes": [
       "Student count differs by 13 between eSchool (886) and Google (899)"
     ]
@@ -15,7 +15,7 @@
     "google": {
       "staff": 320,
       "students": 899,
-      "chromebooks": 986,
+      "chromebooks": 987,
       "error": null
     },
     "jamf": {
